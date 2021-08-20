@@ -7,6 +7,8 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@swc/core": "1.2.80",
+    "@swc/jest": "0.2.2",
     "npm-packlist": "2.2.2"
   },
   "resolutions": {

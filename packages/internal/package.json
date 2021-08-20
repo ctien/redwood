@@ -37,7 +37,6 @@
     "rimraf": "3.0.2"
   },
   "devDependencies": {
-    "@swc/jest": "0.2.2",
     "@types/babel__core": "7.1.15",
     "@types/findup-sync": "4.0.1",
     "@types/fs-extra": "9.0.12",

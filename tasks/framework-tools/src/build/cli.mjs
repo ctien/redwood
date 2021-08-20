@@ -22,7 +22,6 @@ const code = fg.sync('**/*.js', {
   cwd: srcRoot,
   ignore: ['**/*.test.js', '**/__tests__/**', '**/__mocks__/**', '**/*.d.ts'],
 })
-
 for (const srcPath of code) {
   const dest = path.join(packageRoot, 'dist', srcPath)
   const result = swc.transformFileSync(path.join(srcRoot, srcPath), {
@@ -32,7 +31,7 @@ for (const srcPath of code) {
     outputPath: dest,
   })
   fs.mkdirSync(path.dirname(dest), { recursive: true })
-  fs.writeFileSync(dest, result.code)
+  fs.writeFileSync(dest.replace(/\.(ts|tsx)$/, '.js'), result.code)
 }
 
 const templates = fg.sync('**/*.template', {

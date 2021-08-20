@@ -37,17 +37,12 @@
     "rimraf": "3.0.2"
   },
   "devDependencies": {
-    "@swc/jest": "0.1.4",
+    "@swc/jest": "0.2.2",
     "@types/babel__core": "7.1.15",
     "@types/findup-sync": "4.0.1",
     "@types/fs-extra": "9.0.12",
     "@types/rimraf": "3.0.1",
     "graphql-tag": "2.12.5"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/fixtures/"
-    ]
   },
   "scripts": {
     "build": "yarn build:js && yarn build:types",
